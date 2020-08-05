@@ -1,20 +1,7 @@
 package com.company;
 
-public abstract class Person {
+public interface Person {
 
-    String name;
-    String surname;
-    String gender;
+    void person(int id ,String name , String surname , String gender);
 
-    public String getName() {
-        return name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public String getGender() {
-        return gender;
-    }
 }
