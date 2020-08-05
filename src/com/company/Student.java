@@ -2,21 +2,15 @@ package com.company;
 
 import static com.company.School.account_balance;
 
-public class Student {
+public class Student extends Person{
 
     int student_id;
-    String name;
-    String surname;
-    String gender;
     static int initial_student_id = 200;
     static int tuitionfee = 4000;
     static int tuitionfee_paid;
 
     public Student(String name , String surname , String gender ){
-
-        this.name = name;
-        this.surname = surname;
-        this.gender = gender;
+        super(name, surname, gender);
         this.student_id = initial_student_id + 1;
     }
 
