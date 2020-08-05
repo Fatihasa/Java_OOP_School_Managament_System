@@ -4,34 +4,30 @@ import java.util.ArrayList;
 
 public class School {
 
-    String name;
+
     static int account_balance;
-    ArrayList<String> studentList = new ArrayList<>();
-    ArrayList<String> teacherList = new ArrayList<>();
+    ArrayList<Student> studentList;
+    ArrayList<Teacher> teacherList;
+
 
     //This is constructor of School class
-    public School(String name, ArrayList studentList , ArrayList teacherList){
+    public School(ArrayList<Student> studentList , ArrayList<Teacher> teacherList){
 
         account_balance = 0;
 
-        this.name = name;
         this.studentList = studentList;
         this.teacherList = teacherList;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public static int getAccount_balance() {
+    public int getAccount_balance() {
         return account_balance;
     }
 
-    public ArrayList<String> getStudentList() {
+    public ArrayList<Student> getStudentList() {
         return studentList;
     }
 
-    public ArrayList<String> getTeacherList() {
+    public ArrayList<Teacher> getTeacherList() {
         return teacherList;
     }
 
@@ -47,6 +43,8 @@ public class School {
     public int teacherSalaryPayment(int teacherSalary){
         return account_balance-=teacherSalary;
     }
+
+
 
     //public int teacherAllPayment(int teacher_id , int salary){
 

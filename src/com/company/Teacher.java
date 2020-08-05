@@ -1,23 +1,23 @@
 package com.company;
 
-
-
-public class Teacher implements Person{
+public class Teacher {
 
     String name;
     String surname;
     String gender;
     String branch;
-    int teacher_id;
+    int teacher_id = 100;
     int teacherSalary;
 
 
-    public void person(int teacher_id ,String name, String surname, String gender){
+    public Teacher(String name, String surname, String gender ,String branch, int salary){
 
-        this.teacher_id = teacher_id;
+        this.teacher_id += 1;
         this.name = name;
         this.surname = surname;
         this.gender = gender;
+        this.teacherSalary = salary;
+        this.branch = branch;
 
     }
 

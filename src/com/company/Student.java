@@ -1,16 +1,18 @@
 package com.company;
 
-public class Student implements Person{
+import static com.company.School.account_balance;
+
+public class Student {
 
     int student_id;
     String name;
     String surname;
     String gender;
     static int initial_student_id = 200;
-    static int tuitionfee = 2000;
+    static int tuitionfee = 4000;
     static int tuitionfee_paid;
 
-    public void person(int student_id, String name , String surname , String gender ){
+    public Student(String name , String surname , String gender ){
 
         this.name = name;
         this.surname = surname;
@@ -23,6 +25,8 @@ public class Student implements Person{
     public void payment(int student_paid){
 
         tuitionfee_paid += student_paid;
+        account_balance += student_paid;
+
     }
 
     // This method will show the student how much money must pay for the tuition fee.
