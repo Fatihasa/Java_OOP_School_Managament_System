@@ -35,5 +35,7 @@ public class Main {
 
         System.out.println(obj.getAccount_balance());
 
+        System.out.println(obj.teacherAllPayment());
+
     }
 }

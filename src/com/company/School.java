@@ -46,10 +46,14 @@ public class School {
 
 
 
-    //public int teacherAllPayment(int teacher_id , int salary){
+    public int teacherAllPayment(){
+        int sum = 0;
+
+        for(int i = 0; i < teacherList.size() ; i++){
+            sum += teacherList.get(i).teacherSalary;
+        }
 
 
-
-        //return;
-    //}
+        return sum;
+    }
 }
